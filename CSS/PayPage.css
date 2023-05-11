@@ -1,0 +1,156 @@
+ 
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input,
+  select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  body {
+    background-color: #343434;
+           margin:0;
+  }
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    }
+    
+    /* Style the welcome message */
+    #user-first-name {
+    font-weight: bold;
+    }
+    
+    /* Style the paragraph */
+    
+
+
+    .button-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+      margin: 10px;
+      width: 150px;
+      height: 60px;
+      text-align: left;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Malgun Gothic", sans-serif;
+  text-align: center;
+  
+  background-size: contain;
+}
+
+.button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+#home {
+  background-position: -5px -5px;
+  background-color: #343434;
+  border-radius: 90px;
+}
+
+#my-payments {
+  background-position: -5px -98px;
+  background-color: #343434;
+  border-radius: 90px;
+}
+
+#how-to-use {
+  background-position: -5px -193px;
+      background-color: #343434;
+  border-radius: 90px;
+}
+
+#about-us {
+  background-position: -5px -288px;
+  background-color: #343434;
+  border-radius: 90px;
+}
+
+#help {
+  background-position: -5px -383px;
+  background-color: #343434;
+  border-radius: 90px;
+}
+
+#privacy-policy {
+  background-position: -5px -478px;
+  background-color: #343434;
+  border-radius: 90px;
+}
+
+#logout {
+  background-position: -5px -573px;
+  background-color: #FFFFFF;
+  border-radius: 90px;
+  color: #343434;
+  }
+  .Rectangle-11 {
+                  width: 650px;
+                  height: 2000px;
+                  margin: 39px 0 0;
+                  padding: 34px 624px 33px 625px;
+                  border: solid 1px #707070;
+                  background-color: #777373;
+                  border-top-left-radius: 40px;
+                  border-top-right-radius: 40px;
+              }
+  .Rectangle-11 h1{
+    font-size: 35px;
+    color: #fff;
+    margin: 20px;
+    padding:0px 0px 0px 190px;
+    text-decoration: underline;
+  }
+    .Rectangle-11 h2{
+      
+      color: #000000;
+      
+      text-align-last: center;
+    }
+  
+ 

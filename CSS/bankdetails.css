@@ -1,0 +1,179 @@
+body {
+    background-color: #343434;
+     margin:0;
+}
+.welcome h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    
+  }
+  
+  /* Style the welcome message */
+  #user-first-name {
+    font-weight: bold;
+  }
+
+    .button-container {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+height: 100vh;
+flex-wrap: wrap;
+padding-top: 30px;
+}
+
+.button {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 10px;
+width: 150px;
+height: 60px;
+text-align: left;
+color: #fff;
+font-size: 18px;
+font-family: "Malgun Gothic", sans-serif;
+text-align: center;
+
+background-size: contain;
+}
+
+.button:hover {
+opacity: 0.8;
+cursor: pointer;
+}
+
+
+#home {
+background-position: -5px -5px;
+background-color: #343434;
+border-radius: 90px;
+}
+
+#my-payments {
+background-position: -5px -98px;
+background-color: #343434;
+border-radius: 90px;
+}
+
+#how-to-use {
+background-position: -5px -193px;
+background-color: #343434;
+border-radius: 90px;
+}
+
+#about-us {
+background-position: -5px -288px;
+background-color: #343434;
+border-radius: 90px;
+}
+
+#help {
+background-position: -5px -383px;
+background-color: #343434;
+border-radius: 90px;
+}
+
+#privacy-policy {
+background-position: -5px -478px;
+background-color: #343434;
+border-radius: 90px;
+}
+
+#logout {
+background-position: -5px -573px;
+background-color: #FFFFFF;
+border-radius: 90px;
+color: #343434;
+}
+
+
+.Rectangle-11 {
+            width: 650px;
+            height: 1395px;
+            margin: 39px 0 0;
+            padding: 34px 624px 33px 625px;
+            border: solid 1px #707070;
+            background-color: #777373;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+
+
+.content {
+max-width: 1300px;
+margin: 0px 50px 19px -350px;
+padding: 0px;
+color: #fff;
+font-family: "Malgun Gothic", sans-serif;
+font-size: 22px;
+line-height: 1.5;
+width: 1300px;
+text-align: left;
+}
+
+
+
+.content p {
+margin-bottom: 20px;
+}
+.content h1{
+text-align: center;
+}
+.content h2{
+text-align: center;
+}
+
+.Rectangle-19 {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1300px;
+    height: 250px;
+    margin: 55px 0px 55px -555px;
+    padding: 150px 400px 40px 68px;
+    border-radius: 45px;
+    box-shadow: 10px 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #707070;
+    background-color: #fff;
+  }
+  
+  .Rectangle-19 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Rectangle-19 ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  
+  .Rectangle-19 .left-column {
+    flex-basis: 50%;
+    padding-right: 20px;
+    margin: -136px 70px 0px 0px;
+    font-size: 30px;
+  }
+  
+  .Rectangle-19 .right-column {
+    flex-basis: 50%;
+    padding-right: 20px;
+    margin: -136px 150px 0px 200px;
+    font-size: 30px;
+  }
+  .Rectangle-19 .price-details{
+    flex-basis: 50%;
+    padding-right: 20px;
+    margin: -136px 0px 0px 0px;
+    font-size: 30px;
+  }
+  .details{
+    padding: 0px 0px 0px 0px;
+    margin: -140px 0px 0px 560px;
+    font-size: 30px;
+    text-align: center;
+  }
