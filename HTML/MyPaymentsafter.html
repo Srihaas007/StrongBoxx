@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>StrongBoxx</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MyPaymentsafter.css">
+    <script type="module" src="firebase.js"></script>
+    
+    
+	 
+	
+</head>
+     <style>
+    body {
+			background-color: #343434;
+             margin:0;
+		}
+    </style>
+<body>
+	<div class="button-container">
+    <div class="welcome">
+      <h1 style="color: #fff;">Welcome, <span id="user-first-name"></span>!</h1>
+      </div>
+		<div class="button" id="home">
+      <a href="UserAfterLogin.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        Home
+            </a>
+        </div>
+        <div class="button" id="my-payments">
+            <a href="MyPaymentsafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+            My Payments
+            </a>
+        </div>
+        <div class="button" id="how-to-use">
+            <a href="HowtoUseafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+            How to use
+            </a>
+            
+        </div>
+        <div class="button" id="about-us">
+            <a href="AboutUsafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        About us
+            </a>
+        </div>
+        <div class="button" id="help">
+            <a href="Helpafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        Help?
+            </a>
+        </div>
+        <div class="button" id="privacy-policy">
+            <a href="PrivacyPolicyafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        Privacy Policy
+            </a>
+        </div>
+        <div class="button" id="logout">
+        <a style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        Log Out
+        </a>
+        </div>
+        <div class="Rectangle-11">
+          
+   
+        
+            <div id="payment-details" style="font-size: 30px;
+             padding: 0px 0px 0px 0px ;
+             margin: 0px 0px 0px -380px;"></div>  
+
+        
+        </div>      
+    </div>
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you want to use
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+    import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+    import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+    import { getFirestore, collection, addDoc, doc, setDoc, getDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+     
+  
+    // Your Firebase project's configuration object
+    const firebaseConfig = {
+      apiKey: "AIzaSyD-gIwNLSO169SVj8f5qdBjuzo5Kzr5bdo",
+      authDomain: "strongboxx-db92c.firebaseapp.com",
+      databaseURL: "https://strongboxx-db92c-default-rtdb.firebaseio.com",
+      projectId: "strongboxx-db92c",
+      storageBucket: "strongboxx-db92c.appspot.com",
+      messagingSenderId: "685404967390",
+      appId: "1:685404967390:web:4de1d8cc77840135f44d4f"
+    };
+  
+    // Initialize Firebase with your project's configuration
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const database = getDatabase(app);
+  
+    // Get a reference to the Firestore database
+    const db = getFirestore(app);
+
+    
+    // Get the currently logged in user's email
+    const user = getAuth().currentUser;
+    
+
+    onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const userEmail = user.email;
+    console.log("User email:", userEmail);
+    
+
+    // Get the paymentId value from the URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const paymentId = urlParams.get("paymentId");
+    console.log("paymentId:", paymentId);
+    // Get a reference to the payment object in Firestore
+    const paymentsRef = collection(db, "users", userEmail, "payments");
+   
+    // Fetch all the payment documents
+   // Fetch all the payment documents
+    getDocs(paymentsRef)
+      .then((querySnapshot) => {
+        // Create an empty array to store the payment data
+        const paymentData = [];
+
+        // Loop through each payment document and add its data to the paymentData array
+        querySnapshot.forEach((doc) => {
+          paymentData.push(doc.data());
+        });
+
+        // Update the content of the "payment-details" element with the payment data
+        const paymentDetailsElement = document.getElementById("payment-details");
+        paymentDetailsElement.innerHTML = JSON.stringify(paymentData);
+      })
+      .catch((error) => {
+        console.log("Error getting documents:", error);
+      });
+
+  }
+});
+
+
+
+    </script>
+  
+</body>
+</html>

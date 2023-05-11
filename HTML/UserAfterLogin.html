@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User After Login</title>
+    <link rel="stylesheet" href="UserAfterLogin.css">
+    <script type="module" src="firebase.js"></script>
+  </head>
+  <body>
+    <div class="button-container">
+      <div class="welcome">
+        <h1 style="color: #fff;">Welcome, <span id="user-first-name"></span>!</h1>
+      </div>
+      <div class="button" id="home">
+               <a href="UserAfterLogin.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        Home
+              </a>
+      </div>
+      <div class="button" id="my-payments">
+              <a href="MyPaymentsafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+             My Payments
+              </a>
+      </div>
+          <div class="button" id="how-to-use">
+              <a href="HowtoUseafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+             How to use
+              </a>
+             
+      </div>
+      <div class="button" id="about-us">
+              <a href="AboutUsafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+         About us
+              </a>
+      </div>
+      <div class="button" id="help">
+              <a href="Helpafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        Help?
+              </a>
+      </div>
+      <div class="button" id="privacy-policy">
+              <a href="PrivacyPolicyafter.html" style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        Privacy Policy
+              </a>
+      </div>
+      <div class="button" id="logout">
+        <a style="color: inherit; font-family: 'Malgun Gothic', sans-serif; text-decoration: none;">
+        Log Out
+        </a>
+      </div>
+      <div class="Rectangle-11">
+        
+      <div class="slider-container">
+                 
+        <img class="slider-image" src="Slider1.png">
+        <a href="PayPage.html"><button class="button1">PAY NOW</button></a>
+        <a href="HowtoUse.html"><button class="button2">HOW?</button></a>
+        
+        <img class="slider-image" src="Slider2.png">
+        <a href="PayPage.html"><button class="button1">PAY NOW</button></a>
+        <a href="HowtoUse.html"><button class="button2">HOW?</button></a>
+        
+        <img class="slider-image" src="Slider3.png">
+        <a href="PayPage.html"><button class="button1">PAY NOW</button></a>
+        <a href="HowtoUse.html"><button class="button2">HOW?</button></a>
+    
+        <button class="slider-button previous" onclick="previousImage()">&#8249;</button>
+        <button class="slider-button next" onclick="nextImage()">&#8250;</button>
+  </div>
+        </div>
+  
+
+    
+
+<script>
+    
+  let sliderPosition = 1;
+const sliderImages = document.querySelectorAll('.slider-image');
+const previousButton = document.querySelector('.previous');
+const nextButton = document.querySelector('.next');
+
+function previousImage() {
+sliderPosition--;
+if (sliderPosition < 1) {
+  sliderPosition = sliderImages.length;
+}
+updateSlider();
+}
+
+function nextImage() {
+sliderPosition++;
+if (sliderPosition > sliderImages.length) {
+  sliderPosition = 1;
+}
+updateSlider();
+}
+
+function updateSlider() {
+sliderImages.forEach((image, index) => {
+  if (index === sliderPosition - 1) {
+    image.style.transform = `translateX(0)`;
+  } else if (index === sliderPosition % sliderImages.length - 1) {
+    image.style.transform = `translateX(100%)`;
+  } else {
+    image.style.transform = `translateX(-100%)`;
+  }
+});
+}
+
+updateSlider();
+
+setInterval(function() {
+nextImage();
+}, 5000);
+
+previousButton.addEventListener('click', previousImage);
+nextButton.addEventListener('click', nextImage);
+  
+  </script>
+
+  </body>
+</html>
